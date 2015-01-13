@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ui.dialog.GroupDialogController">
+  <children>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Text styleClass="heading" text="Group Details" VBox.vgrow="NEVER" />
+        <GridPane fx:id="inputForm" hgap="15.0" vgap="15.0" VBox.vgrow="ALWAYS">
+          <children>
+            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="titleField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="-1.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="-1.0" vgrow="NEVER" />
+          </rowConstraints>
+        </GridPane>
+        <HBox alignment="TOP_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" VBox.vgrow="NEVER">
+          <children>
+            <HBox spacing="15.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Button fx:id="deleteButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#deleteAction" styleClass="delete-button" text="Delete" HBox.hgrow="NEVER" />
+              </children>
+            </HBox>
+            <Button id="" cancelButton="true" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" HBox.hgrow="NEVER" />
+            <Button fx:id="saveButton" defaultButton="true" mnemonicParsing="false" onAction="#saveAction" styleClass="save-button" text="Save" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../css/styles.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,221 @@
+/*
+ * Some notes about this stylesheet:
+ * - For the button and list-cell styles, most of the selectors come from
+ *   caspian.css, which I included in the docs folder as a reference.
+ * - When using custom fonts, use the actual name of the font, not the filename.
+ *   Simply open the font file to find out it's name.
+ * You should be able to understand everything else by reading the JavaFX CSS
+ * reference guide.
+ * http://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+ */
+
+#main-window {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-color: linear-gradient(derive(slategray, -30%), slategray);
+    -fx-background-insets: 0;
+    -fx-background-radius: 30;
+    -fx-padding: 0.5em 1em;
+    -fx-graphic-text-gap: 1em;
+    -fx-text-fill: white;
+}
+
+.button:focused {
+    -fx-background-color: derive(slategray, 50%), linear-gradient(derive(slategray, -30%), slategray);
+    -fx-background-insets: -1.4, 0;
+    -fx-background-radius:  31.4, 30;
+}
+
+.button:default {
+    -fx-background-color: linear-gradient(derive(royalblue, -30%), royalblue);
+    -fx-background-insets: 0;
+    -fx-background-radius: 30;
+}
+
+.button:default:focused {
+    -fx-background-color: derive(royalblue, 50%), linear-gradient(derive(royalblue, -30%), royalblue);
+    -fx-background-insets: -1.4, 0;
+    -fx-background-radius:  31.4, 30;
+}
+
+.save-button, .save-button:default {
+    -fx-background-color: linear-gradient(derive(forestgreen, -30%), forestgreen);
+    -fx-background-insets: 0;
+    -fx-background-radius: 30;
+}
+
+.save-button:focused, .save-button:default:focused {
+    -fx-background-color: derive(forestgreen, 50%), linear-gradient(derive(forestgreen, -30%), forestgreen);
+    -fx-background-insets: -1.4, 0;
+    -fx-background-radius:  31.4, 30;
+}
+
+.delete-button, .delete-button:default {
+    -fx-background-color: linear-gradient(derive(firebrick, -30%), firebrick);
+    -fx-background-insets: 0;
+    -fx-background-radius: 30;
+}
+
+.delete-button:focused, .delete-button:default:focused {
+    -fx-background-color: derive(firebrick, 50%), linear-gradient(derive(firebrick, -30%), firebrick);
+    -fx-background-insets: -1.4, 0;
+    -fx-background-radius:  31.4, 30;
+}
+
+.quit-button, .quit-button:default {
+    -fx-background-color: linear-gradient(derive(red, -30%), red);
+    -fx-background-insets: 0;
+    -fx-background-radius: 30;
+}
+
+.quit-button:focused, .quit-button:default:focused {
+    -fx-background-color: derive(red, 50%), linear-gradient(derive(red, -30%), red);
+    -fx-background-insets: -1.4, 0;
+    -fx-background-radius:  31.4, 30;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-padding: 1em;
+    -fx-text-fill: black;
+}
+
+#group-list .list-cell {
+    -fx-cell-size: 30;
+}
+
+#reminder-list .list-cell {
+    -fx-cell-size: 60;
+}
+
+.first-cell {
+    -fx-background-color: aliceblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20 20 0 0;
+}
+
+.first-cell:odd {
+    -fx-background-color: whitesmoke;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20 20 0 0;
+}
+
+.list-view:focused .first-cell:focused, .list-view:focused .first-cell:focused:odd, .list-view:focused .first-cell:filled:focused:hover, .list-view:focused .first-cell:filled:focused:selected, .list-view:focused .first-cell:filled:selected, .list-view:focused .first-cell:filled:selected:hover, .list-view:focused .first-cell:filled:focused:selected:hover {
+    -fx-background-color: royalblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20 20 0 0;
+    -fx-text-fill: white;
+}
+
+.first-cell:filled:selected:focused, .first-cell:filled:selected {
+    -fx-background-color: cornflowerblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20 20 0 0;
+}
+
+.regular-cell {
+    -fx-background-color: aliceblue;
+    -fx-background-insets: 0;
+}
+
+.regular-cell:odd {
+    -fx-background-color: whitesmoke;
+    -fx-background-insets: 0;
+}
+
+.list-view:focused .regular-cell:focused, .list-view:focused .regular-cell:focused:odd, .list-view:focused .regular-cell:filled:focused:hover, .list-view:focused .regular-cell:filled:focused:selected, .list-view:focused .regular-cell:filled:selected, .list-view:focused .regular-cell:filled:selected:hover, .list-view:focused .regular-cell:filled:focused:selected:hover {
+    -fx-background-color: royalblue;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.regular-cell:filled:selected:focused, .regular-cell:filled:selected {
+    -fx-background-color: cornflowerblue;
+    -fx-background-insets: 0;
+}
+
+.last-cell {
+    -fx-background-color: aliceblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.last-cell:odd {
+    -fx-background-color: whitesmoke;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.list-view:focused .last-cell:focused, .list-view:focused .last-cell:focused:odd, .list-view:focused .last-cell:filled:focused:hover, .list-view:focused .last-cell:filled:focused:selected, .list-view:focused .last-cell:filled:selected, .list-view:focused .last-cell:filled:selected:hover, .list-view:focused .last-cell:filled:focused:selected:hover {
+    -fx-background-color: royalblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 20 20;
+    -fx-text-fill: white;
+}
+
+.last-cell:filled:selected:focused, .last-cell:filled:selected {
+    -fx-background-color: cornflowerblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.only-cell {
+    -fx-background-color: aliceblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20;
+}
+
+.only-cell:odd {
+    -fx-background-color: whitesmoke;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20;
+}
+
+.list-view:focused .only-cell:focused, .list-view:focused .only-cell:focused:odd, .list-view:focused .only-cell:filled:focused:hover, .list-view:focused .only-cell:filled:focused:selected, .list-view:focused .only-cell:filled:selected, .list-view:focused .only-cell:filled:selected:hover, .list-view:focused .only-cell:filled:focused:selected:hover {
+    -fx-background-color: royalblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+
+.only-cell:filled:selected:focused, .only-cell:filled:selected {
+    -fx-background-color: cornflowerblue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 20;
+}
+
+.list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.action-icon {
+    -fx-font-family: FontAwesome;
+    -fx-font-size: 1.2em;
+}
+
+.button-icon {
+    -fx-font-family: FontAwesome;
+    -fx-font-size: 1.2em;
+    -fx-text-fill: inherit;
+}
+
+.warning-icon {
+    -fx-font-family: FontAwesome;
+    -fx-font-size: 1.2em;
+    -fx-text-fill: red;
+}
+
+.heading {
+    -fx-font-family: "Marck Script";
+    -fx-font-size: 2em;
+    -fx-font-weight: bolder;
+}
+
+.date {
+    -fx-font-size: 0.8em;
+}

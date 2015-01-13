@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ui.dialog.ErrorDialogController">
+  <children>
+    <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <image>
+        <Image url="@../images/bug.png" />
+      </image>
+    </ImageView>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Text styleClass="heading" text="Oops..." VBox.vgrow="NEVER" />
+        <Label fx:id="continueMessage" text="Continue Message" VBox.vgrow="NEVER" />
+        <Label text="Error message:" VBox.vgrow="NEVER" />
+        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefViewportHeight="200.0" prefViewportWidth="400.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+          <content>
+            <TextArea fx:id="errorMessage" editable="false" prefWidth="-1.0" wrapText="false" />
+          </content>
+        </ScrollPane>
+        <HBox fx:id="buttonBox" alignment="TOP_RIGHT" prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" VBox.vgrow="NEVER">
+          <children>
+            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitAction" styleClass="quit-button" text="Quit" />
+            <Button fx:id="continueButton" defaultButton="true" mnemonicParsing="false" onAction="#continueAction" text="Continue" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../css/styles.css" />
+  </stylesheets>
+</AnchorPane>

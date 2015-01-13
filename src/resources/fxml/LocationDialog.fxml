@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ui.dialog.LocationDialogController">
+  <children>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Text styleClass="heading" text="Attach A Location" VBox.vgrow="NEVER" />
+        <StackPane id="StackPane" VBox.vgrow="ALWAYS">
+          <children>
+            <ProgressBar id="" fx:id="progressBar" prefWidth="-1.0" progress="0.0" />
+            <WebView fx:id="webView" prefHeight="300.0" prefWidth="500.0" />
+          </children>
+        </StackPane>
+        <HBox alignment="TOP_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="15.0" VBox.vgrow="NEVER">
+          <children>
+            <HBox spacing="15.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Button fx:id="deleteButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#deleteAction" styleClass="delete-button" text="Delete" HBox.hgrow="NEVER" />
+              </children>
+            </HBox>
+            <Button id="" cancelButton="true" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" HBox.hgrow="NEVER" />
+            <Button fx:id="saveButton" defaultButton="true" mnemonicParsing="false" onAction="#saveAction" styleClass="save-button" text="Save" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../css/styles.css" />
+  </stylesheets>
+</AnchorPane>

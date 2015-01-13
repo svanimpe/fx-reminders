@@ -1,0 +1,10 @@
+/*
+ * These styles make sure the map uses 100% of the space available.
+ */
+
+html, body, #map { 
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
